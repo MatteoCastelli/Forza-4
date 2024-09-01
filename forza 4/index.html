@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forza 4</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    
+    <!--HOME PAGE-->
+    <div id="home" class="hidden">
+        <P id="forza4">FORZA 4</P>
+        <div id="gioca">GIOCA</div>
+        <div id="btnRegole">REGOLE</div>
+        <div id="registro">REGISTRO</div>
+    </div>
+    
+    <!--PAGINA INSERIMENTO NOMI-->
+    <div id="nomi" class="hidden">
+        <form id="nameForm1">
+            <label for="nameInput1" id="giocatore1">GIOCATORE 1<br></label><br>
+            <input type="text" id="nameInput1" required value="Inserisci il nome" onclick="value=''"><br>
+            <button type="submit">SALVA</button><br>
+            <button type="button" id="backButton1">INDIETRO</button>
+        </form>
+
+        <form id="nameForm2" class="hidden">
+            <label for="nameInput2" id="giocatore2">GIOCATORE 2<br></label><br>
+            <input type="text" id="nameInput2" required value="Inserisci il nome" onclick="value=''"><br>
+            <button type="submit">SALVA</button><br>
+            <button type="button" id="backButton2">INDIETRO</button>
+        </form>
+    </div>
+ 
+    <!--PAGINA DI GIOCO-->
+    <div id="contenitore" class="hidden"> </div>
+    <button type="button" id="homeButton" class="hidden">ESCI</button>
+    <div id="turn" class="hidden"></div>
+    
+    <!--PAGINA REGOLE-->
+    <div id="regole" class="hidden">
+        <b>PREPARAZIONE:<br></b>
+        La griglia è inizialmente vuota.<br>
+        Ogni giocatore sceglie un colore per i propri gettoni (rosso o giallo).<br><br>
+
+        <b>SVOLGIMENTO:<br></b>
+        I giocatori si alternano nel turno.<br>
+        Durante il proprio turno, un giocatore inserisce un gettone del proprio colore in una delle colonne della
+        griglia.<br>
+        Il gettone scende fino al livello più basso disponibile della colonna scelta.<br><br>
+
+        <b>VINCITA:<br></b>
+        Un giocatore vince se riesce a mettere quattro dei propri gettoni in fila orizzontalmente, verticalmente o
+        diagonalmente.<br>
+        Se la griglia si riempie completamente senza che nessuno dei due giocatori abbia fatto una fila di quattro
+        gettoni, il gioco finisce in pareggio.<br>
+        <div id="capito">CAPITO</div>
+    </div>
+    
+    <!--PAGINA REGISTRO-->
+    <div id="nom" class="hidden">
+        <ul id="listaNomi">
+            <li class="header"></li>
+            <li class="header"></li>
+            <li class="header"></li>
+        </ul>
+        <button id="esci">ESCI</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
